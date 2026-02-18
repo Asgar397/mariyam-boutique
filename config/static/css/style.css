@@ -1,0 +1,101 @@
+/* ===== HARD RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    width: 100%;
+    height: 60px;
+    background: #111;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 30px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* LOGO TEXT / IMAGE CONTAINER */
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* LOGO IMAGE WITH MOVEMENT */
+.navbar .logo img {
+    height: 55px;
+    width: auto;
+    opacity: 0;
+    animation: logoFade 1s ease forwards;
+    transition: transform 0.4s ease;
+}
+
+/* HOVER EFFECT */
+.navbar .logo img:hover {
+    transform: scale(1.1);
+}
+
+/* NAV LINKS */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* ===== HERO SECTION WITH IMAGE ===== */
+.hero {
+    width: 100%;
+    height: calc(100vh - 60px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-image: url("../images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    animation: heroZoom 18s ease-in-out infinite;
+}
+
+/* HERO TEXT */
+.hero h1 {
+    font-size: 40px;
+    color: #111;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #222;
+    margin-top: 10px;
+}
+
+/* SLOW CINEMATIC MOVEMENT */
+@keyframes heroZoom {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+    100% { transform: scale(1); }
+}
