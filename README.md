@@ -1,1 +1,1 @@
-# mariyam-boutique-django
+# mariyam-boutique-db
