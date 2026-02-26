@@ -24,11 +24,7 @@ import os
 SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-
-ALLOWED_HOSTS = ["mariyam-boutique-django-4.onrender.com",
-    ]
-
-
+ALLOWED_HOSTS = ["mariyam-boutique.onrender.com",]
 # Application definition
 
 INSTALLED_APPS = [
