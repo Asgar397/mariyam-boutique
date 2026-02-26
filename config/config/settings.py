@@ -24,7 +24,14 @@ import os
 SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 ALLOWED_HOSTS = ["mariyam-boutique.onrender.com",]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://mariyam-boutique.onrender.com",
+]
 # Application definition
 
 INSTALLED_APPS = [
