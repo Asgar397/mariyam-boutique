@@ -1,42 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Our Services | Mariyam Boutique</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f6f8;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 60px auto;
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-        }
-        h1 {
-            color: #5a2d82;
-            text-align: center;
-        }
-        ul {
-            line-height: 2;
-            font-size: 18px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Our Services</h1>
-        <ul>
-            <li>Designer Suits Stitching</li>
-            <li>Blouse Stitching (Perfect Fitting)</li>
-            <li>Kurtis (Daily & Party Wear)</li>
-            <li>Alteration & Fitting Services</li>
-            <li>Custom Orders on WhatsApp</li>
-        </ul>
-    </div>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="services-page">
+
+<h1 class="section-title">Our Services</h1>
+
+<div class="services-container">
+
+<div class="service-card">
+<h3>Designer Suits Stitching</h3>
+<p>Custom designer suits stitched with high quality finishing.</p>
+</div>
+
+<div class="service-card">
+<h3>Blouse Stitching</h3>
+<p>Perfect fitting blouse stitching with modern designs.</p>
+</div>
+
+<div class="service-card">
+<h3>Kurtis Stitching</h3>
+<p>Elegant kurtis for daily wear and party wear.</p>
+</div>
+
+<div class="service-card">
+<h3>Alteration & Fitting</h3>
+<p>Professional alteration service for perfect fitting.</p>
+</div>
+
+<div class="service-card">
+<h3>Custom Orders</h3>
+<p>Send your design on WhatsApp and get it stitched.</p>
+</div>
+
+</div>
+
+</section>
+
+{% endblock %}
