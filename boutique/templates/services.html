@@ -28,13 +28,24 @@
 <p>Professional alteration service for perfect fitting.</p>
 </div>
 
+<section class="services-page">
+<div class="services-container">
+
+{% for service in services %}
+
 <div class="service-card">
-<h3>Custom Orders</h3>
-<p>Send your design on WhatsApp and get it stitched.</p>
-</div>
+
+<img src="{{ service.image.url }}" width="300">
+
+<h3>{{ service.title }}</h3>
+
+<p>{{ service.description }}</p>
 
 </div>
 
+{% endfor %}
+
+</div>
 </section>
 
 {% endblock %}
