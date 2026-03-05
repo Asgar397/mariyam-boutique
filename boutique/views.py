@@ -3,6 +3,7 @@ from rest_framework.response import Response
 from .models import Customer
 from .serializers import CustomerSerializer
 from django.shortcuts import render
+from .models import Service
 
 def home(request):
     return render(request, "home.html")
@@ -11,7 +12,9 @@ def about(request):
     return render(request, "about.html")
 
 def services(request):
-    return render(request, "services.html")
+    services = Service.objects.all()
+    return render(request, 
+    "services.html", {"services": services})
 @api_view(['GET'])
 def single_customer(request, id):
 
