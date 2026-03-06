@@ -4,6 +4,21 @@ from .models import Customer
 from .serializers import CustomerSerializer
 from django.shortcuts import render
 from .models import Service
+from .models import Gallery
+from .models import Testimonial
+
+def home(request):
+    gallery = Gallery.objects.all()
+    testimonials = Testimonial.objects.all()
+
+    return render(request, "home.html", {
+        "gallery": gallery,
+        "testimonials": testimonials
+    })
+
+def home(request):
+    gallery = Gallery.objects.all()
+    return render(request, "home.html", {"gallery": gallery})
 
 def home(request):
     return render(request, "home.html")

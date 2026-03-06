@@ -24,6 +24,30 @@
 <img src="/static/images/design5.jpg" alt="design">
 <img src="/static/images/design6.jpg" alt="design">
 
+section class="testimonial">
+
+<h2>Customer Reviews</h2>
+
+{% for t in testimonials %}
+
+<div class="review">
+<h4>{{ t.name }}</h4>
+<p>{{ t.message }}</p>
+</div>
+
+{% endfor %}
+
+section class="gallery">
+<h2>Our Gallery</h2>
+
+<div class="gallery-grid">
+
+{% for g in gallery %}
+
+<img src="{{ g.image.url }}" alt="{{ g.title }}">
+
+{% endfor %}
+
 </div>
 
 </section>
