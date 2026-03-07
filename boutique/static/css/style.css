@@ -192,3 +192,24 @@ transition:0.3s;
 .gallery-container img:hover{
 transform:scale(1.05);
 }
+
+.ai-chat{
+margin-top:40px;
+text-align:center;
+}
+
+.ai-chat input{
+padding:10px;
+width:250px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+.ai-chat button{
+padding:10px 20px;
+background:#ff4d6d;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
