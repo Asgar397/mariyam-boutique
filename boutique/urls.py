@@ -9,4 +9,5 @@ urlpatterns = [
     path('customers/<int:id>/', views.single_customer),
     path('customers/update/<int:id>/', views.update_customer),
     path('customers/delete/<int:id>/', views.delete_customer),
+    path("ai-chat/", views.ai_chat, name="ai_chat"),
 ]

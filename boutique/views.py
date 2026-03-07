@@ -6,6 +6,15 @@ from django.shortcuts import render
 from .models import Service
 from .models import Gallery
 from .models import Testimonial
+import openai
+from django.http import JsonResponse
+
+def ai_chat(request):
+    question = request.GET.get("q")
+
+    answer = "Our boutique provides custom stitching services."
+
+    return JsonResponse({"reply": answer})
 
 def home(request):
     gallery = Gallery.objects.all()
