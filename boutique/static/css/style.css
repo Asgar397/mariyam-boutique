@@ -213,3 +213,16 @@ border:none;
 border-radius:5px;
 cursor:pointer;
 }
+.ai-chat{
+margin-top:60px;
+text-align:center;
+width:100%;
+clear:both;
+}
+#answer{
+margin-top:15px;
+padding:10px;
+background:#f3f3f3;
+border-radius:6px;
+display:inline-block;
+}
