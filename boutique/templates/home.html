@@ -3,12 +3,18 @@
 
 {% block content %}
 
-<div class="hero">
-    <div class="hero-content">
-        <h1>Welcome to Mariyam Boutique</h1>
-        <p>Exclusive Ladies Tailoring & Custom Designs</p>
-        <a href="/services/" class="btn">Explore Services</a>
-    </div>
+<div class="hero text-center
+ text-white d-flex align-items-center justify-content-center">
+
+<div class="hero-content">
+<h1>Mariyam Boutique</h1>
+
+<p>Exclusive Ladies Tailoring & Custom Designs</p>
+
+<a href="/services/" class="btn btn-danger">Explore Services</a>
+
+</div>
+
 </div>
 
 <section class="gallery">
@@ -26,8 +32,6 @@
 
 <section class="testimonial">
 
-<h2>Customer Reviews</h2>
-
 {% for t in testimonials %}
 
 <div class="review">
@@ -37,7 +41,6 @@
 
 {% endfor %}
 
-<section class="gallery">
 <h2>Our Gallery</h2>
 
 <div class="gallery-grid">
@@ -59,27 +62,6 @@
       <button class="btn btn-danger">Ask</button>
     </div>
 
-    <div class="col-md-4">
-      <h3>Our Gallery</h3>
-      <p>See our latest boutique designs.</p>
-    </div>
-
-    <div class="col-md-4">
-      <h3>Customer Reviews</h3>
-      <p>See what our customers say.</p>
-    </div>
-
-  </div>
-
-</div>
-
-<h2>Ask Our AI Assistant</h2>
-
-<input type="text" id="question" placeholder="Ask something">
-<button onclick="askAI()">Ask</button>
-
-<p id="answer"></p>
-
 </section>
 
 <script>
@@ -94,19 +76,9 @@ document.getElementById("answer").innerText = data.reply;
 }
 </script>
 
-<div class="container mt-5">
-
-<h2 class="text-center mb-4">Our Gallery</h2>
-
-<div class="row">
-
-{% for g in gallery %}
-
 <div class="col-md-3 mb-4">
 <img src="{{ g.image.url }}" class="img-fluid rounded shadow">
 </div>
-
-{% endfor %}
 
 </div>
 
@@ -131,28 +103,8 @@ document.getElementById("answer").innerText = data.reply;
 </div>
 
 {% endfor %}
-<div class="container mt-5">
-
-  <div class="row">
-
-    <div class="col-md-4">
-      <h3>Ask Our AI Assistant</h3>
-      <input type="text" class="form-control mb-2" placeholder="Ask something">
-      <button class="btn btn-danger">Ask</button>
-    </div>
-
-    <div class="col-md-4">
-      <h3>Our Gallery</h3>
-    </div>
-
-    <div class="col-md-4">
-      <h3>Customer Reviews</h3>
-    </div>
-
-  </div>
 
 </div>
-
 </div>
 </section>
 
