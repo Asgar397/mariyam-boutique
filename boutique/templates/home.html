@@ -31,6 +31,7 @@
 <img src="/static/images/design6.jpg" alt="design">
 
 <section class="testimonial">
+<h2>Customer Reviews</h2>
 
 {% for t in testimonials %}
 
@@ -39,7 +40,13 @@
 <p>{{ t.message }}</p>
 </div>
 
+{% empty %}
+
+<p>No reviews yet</p>
+
 {% endfor %}
+
+</section>
 
 <h2>Our Gallery</h2>
 
