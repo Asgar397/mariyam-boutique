@@ -3,19 +3,20 @@
 
 {% block content %}
 
-<div class="hero text-center
- text-white d-flex align-items-center justify-content-center">
-
+<section class="hero">
 <div class="hero-content">
+
 <h1>Mariyam Boutique</h1>
 
 <p>Exclusive Ladies Tailoring & Custom Designs</p>
 
-<a href="/services/" class="btn btn-danger">Explore Services</a>
+<a href="/services/" class="btn btn-danger">
+  Explore Services</a>
 
 </div>
 
-</div>
+</section>
+
 
 <section class="gallery">
 
@@ -23,20 +24,43 @@
 
 <div class="gallery-container">
 
+  <div class="gallery-item">
 <img src="/static/images/design1.jpg" alt="design">
+<h5>Designer suit</h5>
+</div>
+<div class="gallery-item">
 <img src="/static/images/design2.jpg" alt="design">
+<h5>Party Kurti</h5>
+</div>
+<div class="gallery-item">
 <img src="/static/images/design3.jpg" alt="design">
+<h5>Indo-Western</h5>
+</div>
+<div class="gallery-item">
 <img src="/static/images/design4.jpg" alt="design">
+<h5>Casual Wear</h5>
+</div>
+<div class="gallery-item">
 <img src="/static/images/design5.jpg" alt="design">
+<h5>party</h5>
+</div>
+<div class="gallery-item">
 <img src="/static/images/design6.jpg" alt="design">
+<h5>Designer Dress</h5>
+</div>
 
-<h2>Our Gallery</h2>
 
 <div class="gallery-grid">
 
 {% for g in gallery %}
 
+<div class="gallery-item">
+
 <img src="{{ g.image.url }}" alt="{{ g.title }}">
+
+<h5 class="design-title">{{ g.title }}</h5>
+
+</div>
 
 {% endfor %}
 

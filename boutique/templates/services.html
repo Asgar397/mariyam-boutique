@@ -8,9 +8,54 @@
 
 <div class="services-container">
 
-<div class="service-card">
-<h3>Designer Suits Stitching</h3>
-<p>Custom designer suits stitched with high quality finishing.</p>
+<div class="container mt-5">
+
+<h2 class="text-center mb-4">Our Services</h2>
+
+<div class="row">
+
+<div class="col-md-4">
+
+<div class="card shadow mb-4">
+
+<div class="card-body">
+
+<h5 class="card-title">Designer Suits Stitching</h5>
+
+<p class="card-text">
+Custom designer suits stitched with high quality finishing.
+</p>
+
+<a href="#" class="btn btn-success">
+WhatsApp Order
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+<div class="card shadow p-3 mb-4">
+
+<h5>Blouse Stitching</h5>
+<p>Perfect fitting blouse stitching with modern designs.</p>
+
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow p-3 mb-4">
+
+<h5>Kurtis Stitching</h5>
+<p>Elegant kurtis for daily wear and party wear.</p>
+
+</div>
+</div>
+
+</div>
+
 </div>
 
 <div class="service-card">
@@ -33,13 +78,30 @@
 
 {% for service in services %}
 
-<div class="service-card">
+<div class="col-md-4">
 
-<img src="{{ service.image.url }}" width="300">
+<div class="card mb-4 shadow">
+
+<img src="{{ service.image.url }}" class="card-img-top">
+
+<div class="card-body text-center">
+
+<h5 class="card-title">{{ service.title }}
+</h5>
 
 <h3>{{ service.title }}</h3>
 
 <p>{{ service.description }}</p>
+
+</div>
+
+<div class="card-body text-center">
+
+<h5 class="card-title">Designer Dress</h5>
+
+<a href="https://wa.me/919356731146" class="btn btn-success">
+WhatsApp Order
+</a>
 
 </div>
 
