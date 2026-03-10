@@ -26,7 +26,7 @@ def create_order(request):
         order.name = name
         order.phone = phone
         order.design = design
-        order.amount = 500
+        order.amount = 10000
         order.save()
 
     return redirect("/payment/")
