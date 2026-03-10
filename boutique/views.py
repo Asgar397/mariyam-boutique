@@ -1,13 +1,35 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .models import Customer
 from .serializers import CustomerSerializer
 from django.shortcuts import render
 from .models import Service
 from .models import Gallery
 from .models import Testimonial
+from .models import Customer
 import openai
 from django.http import JsonResponse
+from django.shortcuts import redirect
+from .models import Order
+
+def payment(request):
+    return render(request, "payment.html")
+
+def create_order(request):
+
+    if request.method == "POST":
+
+        name = request.POST.get("name")
+        phone = request.POST.get("phone")
+        design = request.POST.get("design")
+
+        order = Order()
+        order.name = name
+        order.phone = phone
+        order.design = design
+        order.amount = 500
+        order.save()
+
+    return redirect("/payment/")
 
 def ai_chat(request):
     question = request.GET.get("q")
@@ -25,12 +47,6 @@ def home(request):
         "testimonials": testimonials
     })
 
-def home(request):
-    gallery = Gallery.objects.all()
-    return render(request, "home.html", {"gallery": gallery})
-
-def home(request):
-    return render(request, "home.html")
 
 def about(request):
     return render(request, "about.html")

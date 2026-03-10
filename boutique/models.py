@@ -1,5 +1,22 @@
 from django.db import models
 
+class Customer(models.Model):
+    name = models.CharField(max_length=100)
+    phone = models.CharField(max_length=15)
+
+    def __str__(self):
+        return self.name
+
+class Order(models.Model):
+    name = models.CharField(max_length=100)
+    phone = models.CharField(max_length=15)
+    design = models.CharField(max_length=100)
+    amount = models.IntegerField(default=500)
+    paid = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.name
+
 class Testimonial(models.Model):
     name = models.CharField(max_length=100)
     message = models.TextField()
@@ -22,20 +39,13 @@ class Service(models.Model):
     def __str__(self):
         return self.title
 
-class Customer(models.Model):
-    name = models.CharField(max_length=100)
-    phone = models.CharField(max_length=15)
-    address = models.TextField()
-
-    def __str__(self):
-        return self.name
-
 
 class Order(models.Model):
-    customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
-    service = models.ForeignKey(Service, on_delete=models.CASCADE)
-    amount = models.IntegerField()
-    status = models.CharField(
+ name = models.CharField(max_length=100)
+phone = models.CharField(max_length=15)
+design = models.CharField(max_length=100)
+amount = models.IntegerField(default=500)
+status = models.CharField(
         max_length=20,
         choices=[
             ('pending', 'Pending'),
@@ -44,7 +54,7 @@ class Order(models.Model):
         ],
         default='pending'
     )
-    created_at = models.DateTimeField(auto_now_add=True)
+created_at = models.DateTimeField(auto_now_add=True)
 
-    def __str__(self):
-        return f"{self.customer.name} - {self.service.title}"
+def __str__(self):
+        return f"{self.name} - {self.design}"
